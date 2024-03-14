@@ -1,3 +1,5 @@
+# 参考文档：https://gist.github.com/myd7349/9f7c6334e67d1aee68a722a15df4a62a
+
 # GCC 编译器: https://hub.gitmirror.com/https://github.com/niXman/mingw-builds-binaries/releases/download/13.2.0-rt_v11-rev0/x86_64-13.2.0-release-win32-seh-msvcrt-rt_v11-rev0.7z
 # CMake: https://hub.gitmirror.com/https://github.com/Kitware/CMake/releases/download/v3.28.3/cmake-3.28.3-windows-x86_64.zip
 # 解压缩后把bin目录加入环境变量中
