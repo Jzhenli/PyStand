@@ -1,0 +1,21 @@
+# GCC 编译器: https://hub.gitmirror.com/https://github.com/niXman/mingw-builds-binaries/releases/download/13.2.0-rt_v11-rev0/x86_64-13.2.0-release-win32-seh-msvcrt-rt_v11-rev0.7z
+# CMake: https://hub.gitmirror.com/https://github.com/Kitware/CMake/releases/download/v3.28.3/cmake-3.28.3-windows-x86_64.zip
+# 解压缩后把bin目录加入环境变量中
+
+# 克隆源代码到本地
+git clone https://github.com/skywind3000/PyStand
+
+# cd 到 PyStand 源码的根目录（CMakeLists.txt 所在目录）
+cd PyStand
+
+# 在 PyStand 目录下创建一个 build 子目录，用于存储构建过程中生成的临时文件
+mkdir build
+
+# 当前路径依然在 PyStand 根目录，但我们通过 -B 参数指定了构建目录
+# 等价于：
+# cmake -S . -B build
+# 用mingw-64编译控制台程序，如果是GUI程序，ON改为OFF
+cmake -B build -D PYSTAND_CONSOLE=ON -G "MinGW Makefiles" 
+
+# 开始 Build
+cmake --build build --config Release
